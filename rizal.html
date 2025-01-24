@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippine Heroes: Rizal's Martyrdom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            position: relative;
+        }
+
+        /* Main Content */
+        .main-content {
+            position: relative;
+            padding: 50px 20px;
+            background-color: rgba(139, 69, 19, 0.8); /* Semi-transparent brown for history */
+            color: white;
+            text-align: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navbar Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #333;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #45a049;
+        }
+
+        /* Page Styles */
+        .page {
+            display: none; /* Hide all pages by default */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Show page when it is the active page */
+        .active {
+            display: block;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+        }
+
+        /* Style for TikTok video at the bottom of the homepage */
+        .video-container {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+        }
+
+        .page-content {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Homepage: Text and TikTok Video at the Bottom -->
+    <div id="home" class="page active">
+        <div class="main-content">
+            <header>
+                <h1>José Rizal: The Martyr of Philippine Independence</h1>
+                <p>Explore the life, works, and martyrdom of our national hero, José Rizal.</p>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('page1')">Rizal's Early Life</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('page2')">Education</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('page3')">Noli Me Tangere</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('page4')">El Filibusterismo</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('page5')">Rizal's Martyrdom</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- TikTok Video -->
+        <div class="video-container">
+            <iframe src="https://www.tiktok.com/embed/6984146632929496346?is_from_webapp=1&sender_device=pc" 
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Page 1: José Rizal's Early Life -->
+    <div id="page1" class="page">
+        <h2>Rizal's Early Life</h2>
+        <p>Born on June 19, 1861, in Calamba, Laguna, Rizal's early years set the foundation for his future as a reformist and intellectual.</p>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showPage('home')">Back to Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('page2')">Next: Education</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page 2: Rizal's Education -->
+    <div id="page2" class="page">
+        <h2>Rizal's Education</h2>
+        <p>José Rizal was educated in the Philippines and Europe, excelling in multiple disciplines including medicine, philosophy, and literature.</p>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showPage('page1')">Back to Early Life</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('page3')">Next: Noli Me Tangere</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page 3: Noli Me Tangere -->
+    <div id="page3" class="page">
+        <h2>Noli Me Tangere</h2>
+        <p>Rizal's first novel, which exposed the corruption of the Spanish government and clergy in the Philippines.</p>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showPage('page2')">Back to Education</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('page4')">Next: El Filibusterismo</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page 4: El Filibusterismo -->
+    <div id="page4" class="page">
+        <h2>El Filibusterismo</h2>
+        <p>Rizal's revolutionary second novel, calling for more drastic action to end Spanish oppression in the Philippines.</p>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showPage('page3')">Back to Noli Me Tangere</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('page5')">Next: Rizal's Martyrdom</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page 5: Rizal's Martyrdom -->
+    <div id="page5" class="page">
+        <h2>Rizal's Martyrdom</h2>
+        <p>On December 30, 1896, José Rizal was executed by firing squad in Luneta, Manila, for his role in advocating for reforms and Philippine independence.</p>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showPage('page4')">Back to El Filibusterismo</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('home')">Back to Home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        // Function to show the specific page when clicked
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            var page = document.getElementById(pageId);
+            page.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
